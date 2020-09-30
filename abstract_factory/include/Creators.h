@@ -8,21 +8,8 @@ public:
   virtual AbstractFireStarter* createFireStarter() const = 0;
 };
 
-class RetroCreator : public AbstractCreator {
-public:
-  AbstractTent* createTent() const override;
-  AbstractSleepingBag* createSleepingBag() const override;
-  AbstractFireStarter* createFireStarter() const override;
-};
-
-class ModernCreator : public AbstractCreator {
-public:
-  AbstractTent* createTent() const override;
-  AbstractSleepingBag* createSleepingBag() const override;
-  AbstractFireStarter* createFireStarter() const override;
-};
-
-class UltralightCreator : public AbstractCreator {
+template<VariantEnum E>
+class Creator : public AbstractCreator {
 public:
   AbstractTent* createTent() const override;
   AbstractSleepingBag* createSleepingBag() const override;

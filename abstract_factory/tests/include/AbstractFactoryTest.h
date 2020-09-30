@@ -6,7 +6,7 @@
 #include <string>
 
 TEST(AbstractFactoryTest, InitRetroGearTest) {
-  AbstractCreator* rc = new RetroCreator();
+  AbstractCreator* rc = new Creator<RETRO>();
   AbstractTent* tent = rc->createTent();
   AbstractSleepingBag* sleeping_bag = rc->createSleepingBag();
   AbstractFireStarter* fire_starter = rc->createFireStarter();
@@ -25,7 +25,7 @@ TEST(AbstractFactoryTest, InitRetroGearTest) {
 }
 
 TEST(AbstractFactoryTest, InitModernGearTest) {
-  AbstractCreator* mc = new ModernCreator();
+  AbstractCreator* mc = new Creator<MODERN>();
   AbstractTent* tent = mc->createTent();
   AbstractSleepingBag* sleeping_bag = mc->createSleepingBag();
   AbstractFireStarter* fire_starter = mc->createFireStarter();
@@ -44,7 +44,7 @@ TEST(AbstractFactoryTest, InitModernGearTest) {
 }
 
 TEST(AbstractFactoryTest, InitUltralightGearTest) {
-  AbstractCreator* ulc = new UltralightCreator();
+  AbstractCreator* ulc = new Creator<ULTRALIGHT>();
   AbstractTent* tent = ulc->createTent();
   AbstractSleepingBag* sleeping_bag = ulc->createSleepingBag();
   AbstractFireStarter* fire_starter = ulc->createFireStarter();

@@ -1,37 +1,44 @@
 #include "Creators.h"
 
-AbstractTent* RetroCreator::createTent() const {
-  return new RetroTent();
+
+// Our tent creators.
+
+template<> AbstractTent* Creator<RETRO>::createTent() const {
+  return new Tent<RETRO>();
 }
 
-AbstractTent* ModernCreator::createTent() const {
-  return new ModernTent();
+template<> AbstractTent* Creator<MODERN>::createTent() const {
+  return new Tent<MODERN>();
 }
 
-AbstractTent* UltralightCreator::createTent() const {
-  return new UltralightTent();
+template<> AbstractTent* Creator<ULTRALIGHT>::createTent() const {
+  return new Tent<ULTRALIGHT>();
 }
 
-AbstractSleepingBag* RetroCreator::createSleepingBag() const {
-  return new RetroSleepingBag();
+// Our sleeping bag creators.
+
+template<> AbstractSleepingBag* Creator<RETRO>::createSleepingBag() const {
+  return new SleepingBag<RETRO>();
 }
 
-AbstractSleepingBag* ModernCreator::createSleepingBag() const {
-  return new ModernSleepingBag();
+template<> AbstractSleepingBag* Creator<MODERN>::createSleepingBag() const {
+  return new SleepingBag<MODERN>();
 }
 
-AbstractSleepingBag* UltralightCreator::createSleepingBag() const {
-  return new UltralightSleepingBag();
+template<> AbstractSleepingBag* Creator<ULTRALIGHT>::createSleepingBag() const {
+  return new SleepingBag<ULTRALIGHT>();
 }
 
-AbstractFireStarter* RetroCreator::createFireStarter() const {
-  return new RetroFireStarter();
+// Our fire starter creators.
+
+template<> AbstractFireStarter* Creator<RETRO>::createFireStarter() const {
+  return new FireStarter<RETRO>();
 }
 
-AbstractFireStarter* ModernCreator::createFireStarter() const {
-  return new ModernFireStarter();
+template<> AbstractFireStarter* Creator<MODERN>::createFireStarter() const {
+  return new FireStarter<MODERN>();
 }
 
-AbstractFireStarter* UltralightCreator::createFireStarter() const {
-  return new UltralightFireStarter();
+template<> AbstractFireStarter* Creator<ULTRALIGHT>::createFireStarter() const {
+  return new FireStarter<ULTRALIGHT>();
 }
