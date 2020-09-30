@@ -37,6 +37,7 @@ endif(BUILD_TESTS)
 #---------------------------------------------------------------------------------------------------
 set(SOURCES
     src/Products.cpp
+    src/Creators.cpp
 )
 
 set(LIBRARY_NAME ${PROJECT_NAME}) # Default name for library built from src
