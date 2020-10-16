@@ -1,17 +1,24 @@
+#pragma once
 #include <string>
+
+// Define the abstract product classes.
 
 class AbstractTent {
 public:
-  virtual std::string camp() const;  
+  virtual std::string camp() const = 0;  
 };
 
-// class AbstractSleepingBag {
-//   virtual std::string camp() const;
-// };
+class AbstractSleepingBag {
+public:
+  virtual std::string camp() const = 0;
+};
 
-// class AbstractFireStarter {
-//   virtual std::string camp() const;
-// };
+class AbstractFireStarter {
+public:
+  virtual std::string camp() const = 0;
+};
+
+// Define our variants.
 
 enum VariantEnum {
   RETRO = 1,
@@ -19,41 +26,21 @@ enum VariantEnum {
   ULTRALIGHT = 3
 };
 
-// template <VariantEnum E>
-// class Tent : public AbstractTent {
-// public:
-//   std::string camp() const override;
-// };
-
-// template <VariantEnum E>
-// class SleepingBag : public AbstractSleepingBag {
-// public:
-//   std::string camp() const override;
-// };
-
-// template <VariantEnum E>
-// class FireStarter : publiic AbstractFireStarter {
-// public:
-//   std::string camp() const override;
-// };
 
 template <VariantEnum E>
-class Tent : public AbstractTent {};
-
-template <>
-class Tent<RETRO> : public AbstractTent {
+class Tent : public AbstractTent {
 public:
   std::string camp() const override;
 };
 
-template <>
-class Tent<MODERN> : public AbstractTent {
+template<VariantEnum E>
+class SleepingBag : public AbstractSleepingBag {
 public:
   std::string camp() const override;
 };
 
-template <>
-class Tent<ULTRALIGHT> : public AbstractTent {
+template<VariantEnum E>
+class FireStarter : public AbstractFireStarter {
 public:
   std::string camp() const override;
 };
