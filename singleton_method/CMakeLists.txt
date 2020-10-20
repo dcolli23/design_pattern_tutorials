@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.8.2)
 
-set(PROJECT_NAME <PROJECT_NAME_HERE>)
+set(PROJECT_NAME singleton_method)
 
 project(${PROJECT_NAME} VERSION 0.0.1 LANGUAGES CXX)
 
@@ -36,7 +36,7 @@ endif(BUILD_TESTS)
 # Find files for this repository - this needs to be updated for every new src file.
 #---------------------------------------------------------------------------------------------------
 set(SOURCES
-    <source files here>
+    src/singleton.cpp
 )
 
 set(LIBRARY_NAME ${PROJECT_NAME}) # Default name for library built from src
