@@ -1,6 +1,7 @@
+#pragma once
 #include <memory>
 
-#include "Products.h"
+#include "Employees.h"
 
 class TrainingProgram 
 {

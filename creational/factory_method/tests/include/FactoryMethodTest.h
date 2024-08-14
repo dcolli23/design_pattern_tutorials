@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 
-#include "Products.h"
-#include "Creators.h"
+#include "Employees.h"
+#include "TrainingPrograms.h"
 
 #include <string>
 #include <memory>

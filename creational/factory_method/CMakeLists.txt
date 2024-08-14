@@ -34,8 +34,8 @@ endif(BUILD_TESTS)
 # Find files for this repository - this needs to be updated for every new src file.
 #---------------------------------------------------------------------------------------------------
 set(SOURCES
-    src/Creators.cpp
-    src/Products.cpp
+    src/TrainingPrograms.cpp
+    src/Employees.cpp
 )
 
 set(LIBRARY_NAME FactoryMethod) # Default name for library built from src
