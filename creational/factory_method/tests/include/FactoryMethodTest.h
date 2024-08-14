@@ -4,35 +4,40 @@
 #include "Creators.h"
 
 #include <string>
+#include <memory>
 
-TEST(FactoryMethodTest, ProductATest) {
-  CreatorA* creator_a = new CreatorA();
-  Product* prodA = creator_a->createProduct();
-  std::string test_var = prodA->doStuff();
-  std::string truth_var = "ProductA::doStuff called.";
+TEST(FactoryMethodTest, SalesPersonTest) 
+{
+  auto trainingProgram = std::make_shared<BusinessSchool>();
+  std::shared_ptr<Employee> employee = trainingProgram->trainEmployee();
+  std::string test_var = employee->doWork();
+  std::string truth_var = "I'm a Sales Person! I sell stuff.";
   EXPECT_EQ(test_var, truth_var);
 }
 
-TEST(FactoryMethodTest, ProductBTest) {
-  Creator* creator_b = new CreatorB();
-  Product* prodB = creator_b->createProduct();
-  std::string test_var = prodB->doStuff();
-  std::string truth_var = "ProductB::doStuff called.";
+TEST(FactoryMethodTest, AccountantTest) 
+{
+  auto trainingProgram = std::make_shared<AccountingProgram>();
+  std::shared_ptr<Employee> employee = trainingProgram->trainEmployee();
+  std::string test_var = employee->doWork();
+  std::string truth_var = "I'm an Accountant! I do number stuff.";
   EXPECT_EQ(test_var, truth_var);
 }
 
-TEST(FactoryMethodTest, ProductCTest) {
-  Creator* creator_c = new CreatorC();
-  Product* prodC = creator_c->createProduct();
-  std::string test_var = prodC->doStuff();
-  std::string truth_var = "ProductC::doStuff called.";
+TEST(FactoryMethodTest, SoftwareEngineerTest) 
+{
+  auto trainingProgram = std::make_shared<CsProgram>();
+  std::shared_ptr<Employee> employee = trainingProgram->trainEmployee();
+  std::string test_var = employee->doWork();
+  std::string truth_var = "I'm a Software Engineer! I drink coffee.";
   EXPECT_EQ(test_var, truth_var);
 }
 
-TEST(FactoryMethodTest, DefaultProductTest) {
-  Creator* creator_default = new Creator();
-  Product* prod_default = creator_default->createProduct();
-  std::string test_var = prod_default->doStuff();
-  std::string truth_var = "Product::doStuff called.";
+TEST(FactoryMethodTest, DefaultEmployeeTest) 
+{
+  auto trainingProgram = std::make_shared<TrainingProgram>();
+  std::shared_ptr<Employee> employee = trainingProgram->trainEmployee();
+  std::string test_var = employee->doWork();
+  std::string truth_var = "I am an Employee! My work is ill-defined.";
   EXPECT_EQ(test_var, truth_var);
 }

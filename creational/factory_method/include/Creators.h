@@ -1,21 +1,27 @@
+#include <memory>
+
 #include "Products.h"
 
-class Creator {
+class TrainingProgram 
+{
 public:
-  virtual Product* createProduct() const;
+  virtual std::shared_ptr<Employee> trainEmployee() const;
 };
 
-class CreatorA : public Creator {
+class BusinessSchool : public TrainingProgram 
+{
 public:
-  Product* createProduct() const override;
+  std::shared_ptr<Employee> trainEmployee() const override;
 };
 
-class CreatorB : public Creator {
+class AccountingProgram : public TrainingProgram 
+{
 public:
-  Product* createProduct() const override;
+  std::shared_ptr<Employee> trainEmployee() const override;
 };
 
-class CreatorC : public Creator {
+class CsProgram : public TrainingProgram 
+{
 public:
-  Product* createProduct() const override;
+  std::shared_ptr<Employee> trainEmployee() const override;
 };

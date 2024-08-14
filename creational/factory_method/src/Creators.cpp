@@ -1,18 +1,22 @@
 #include "Creators.h"
 #include "Products.h"
 
-Product* Creator::createProduct() const {
-  return new Product();
+std::shared_ptr<Employee> TrainingProgram::trainEmployee() const 
+{
+  return std::make_shared<Employee>();
 }
 
-Product* CreatorA::createProduct() const {
-  return new ProductA();
+std::shared_ptr<Employee> BusinessSchool::trainEmployee() const 
+{
+  return std::make_shared<SalesPerson>();
 }
 
-Product* CreatorB::createProduct() const {
-  return new ProductB();
+std::shared_ptr<Employee> AccountingProgram::trainEmployee() const 
+{
+  return std::make_shared<Accountant>();
 }
 
-Product* CreatorC::createProduct() const {
-  return new ProductC();
+std::shared_ptr<Employee> CsProgram::trainEmployee() const 
+{
+  return std::make_shared<SoftwareEngineer>();
 }

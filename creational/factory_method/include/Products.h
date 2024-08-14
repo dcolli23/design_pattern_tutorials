@@ -1,22 +1,29 @@
 #pragma once
 #include <string>
 
-class Product {
+// "Product" declares the interface, which is common to all objects that can be produced by the
+// creator and its subclasses.
+class Employee 
+{
 public:
-  virtual std::string doStuff() const;
+  virtual std::string doWork() const;
 };
 
-class ProductA : public Product {
+// "Concrete Products" are different implementations of the product interface.
+class SalesPerson : public Employee 
+{
 public:
-  std::string doStuff() const override;
+  std::string doWork() const override;
 };
 
-class ProductB : public Product {
+class Accountant : public Employee 
+{
 public:
-  std::string doStuff() const override;
+  std::string doWork() const override;
 };
 
-class ProductC : public Product {
+class SoftwareEngineer : public Employee 
+{
 public:
-  std::string doStuff() const override;
+  std::string doWork() const override;
 };

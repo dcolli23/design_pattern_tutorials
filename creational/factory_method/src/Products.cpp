@@ -1,17 +1,21 @@
 #include "Products.h"
 
-std::string Product::doStuff() const {
-  return "Product::doStuff called.";
+std::string Employee::doWork() const 
+{
+  return "I am an Employee! My work is ill-defined.";
 }
 
-std::string ProductA::doStuff() const {
-  return "ProductA::doStuff called.";
+std::string SalesPerson::doWork() const 
+{
+  return "I'm a Sales Person! I sell stuff.";
 }
 
-std::string ProductB::doStuff() const {
-  return "ProductB::doStuff called.";
+std::string Accountant::doWork() const 
+{
+  return "I'm an Accountant! I do number stuff.";
 }
 
-std::string ProductC::doStuff() const {
-  return "ProductC::doStuff called.";
+std::string SoftwareEngineer::doWork() const 
+{
+  return "I'm a Software Engineer! I drink coffee.";
 }
