@@ -1,5 +1,7 @@
 # C++ Design Patterns
 
+This is something I threw together to both develop my knowledge of design patterns and to keep up my C++ knowledge from time to time. All of the code herein is built upon the examples provided in ["Dive Into Design Patterns" by Alexander Shvets](https://refactoring.guru/design-patterns/book). I cannot recommend this book enough!
+
 # Table of Contents
 
 - [C++ Design Patterns](#c-design-patterns)
